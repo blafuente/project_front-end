@@ -5,12 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The Proffesional Hobo</title>
     <meta name="viewport" content="width=480, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script>
+        window.onload=function(){
+        document.getElementById("flight_button").click();
+    };
+    </script>
 </head>
 <body>
+    <div class='popup'>
+        <div class='popup_box'>
+                <a href='' class='close'>X</a>
+            <h1>Subscribe to our newsletter</h1>
+            <p>Subscribe to our newsletter for our lastest offer and get special offers</p>
+            <input type="email" name="emailaddress" placeholder="Name">
+            <input type="text" name="name" placeholder="Email">
+            <button class='sign_up_button'>Signup Now</button>
+        </div>
+    </div>
+
+
+
     <nav>
         <div class="title">
             <a href="index.html"><h1>The Proffesional Hobo</h1></a>
@@ -34,7 +52,7 @@
             <p>Lorizzle ipsizzle dolizzle sit amizzle, ma nizzle adipiscing elit. 
             Nullam sapizzle velit, check it out volutpat, suscipit shizzlin dizzle, gravida vizzle, arcu. Pellentesque 
             fo shizzle cool. Sizzle eros. Fusce izzle dolor phat turpis tempus dawg</p>
-            <a href="service_bundle.html"><button>Find a flight</button></a>
+            <a href="service_bundle.html"><button id="fl">Find a flight</button></a>
             
         </div>
         <div class="car">
@@ -43,7 +61,7 @@
             <p>Mofo pellentesque nibh et phat. Shut the shizzle up in fo. Tellivizzle eleifend rhoncizzle nisi. 
             In hizzle habitasse platea fo shizzle mah nizzle fo rizzle, mah home g-dizzle. 
             Fo shizzle mah nizzle fo rizzle, mah home g-dizzle dapibizzle</p>
-            <a href="service_bundle.html"><button>Find a car retal</button></a>
+            <a href="service_bundle.html"><button id="cr">Find a car retal</button></a>
             
         </div>
         <div class="hotel">
@@ -51,7 +69,7 @@
             <h1>Hotels</h1>
             <p>Etizzle bizzle urna izzle nisl. Away quizzle arcu. Maecenas , ipsizzle malesuada malesuada scelerisque, 
             nulla purizzle euismizzle boofron, ma nizzle luctizzle dizzle my shizz izzle fo.</p>
-            <a href="service_bundle.html"><button>Find a hotel</button></a>
+            <a href="service_bundle.html"><button id="hl">Find a hotel</button></a>
             
         </div>
         <div class="things">
@@ -59,8 +77,7 @@
             <h1>Things To Do</h1>
             <p>Curabitizzle tellizzle urna, funky fresh eu, shizzle my nizzle crocodizzle ac, eleifend ghetto, nunc. For sure suscipizzle. 
             Integizzle semper velizzle check it out for sure.</p>
-            <a href="service_bundle.html"><button id="fa">Find things to do</button></a>
-            <!-- <input type="checkbox"> -->
+            <a href="service_bundle.html"><button id="td">Find things to do</button></a>
         </div>
     </main>
 
@@ -72,18 +89,45 @@
                 <button id="hotel_button"><i class="fas fa-hotel fa-2x"></i><br>Hotel</button>
                 <button id="things_button"><i class="fas fa-funnel-dollar fa-2x"></i><br>Things to do</button>
             </div>
-            <div id="label">
-
-            </div>
-            <div class="label_button">
-                <a href="results.html"><button>Search</button></a>
-            </div>
+            <form action="results.html" method="GET">
+                <div class="buttons_bundle"></div>
+                <div id="label">
+                    
+                </div>
+                <div class="label_button">
+                    <a href="results.html"><button type="submit" class="main_search">Search</button></a>
+                </div>
+            </form>
             
         </div>
     
 
 
     </div>
+
+    <div class="banner">
+        <div class="mobile">
+            <div class="mobile_text">
+                <h1>Get Exclusive deals on the GO!</h1>
+                <p>Find Great deals on Hotel, Flights, Car Rentals and Things to Do</p>
+            </div>
+            <div class="mobile_icons">
+                <h2>Download Now</h2>
+                <img src="Images/devices_apps.jpg">
+                
+            </div>
+        </div>
+
+        <div class="mobile_image">
+            <div class="mobile_image1">
+                <img src="Images/iphone-6.png">
+            </div>
+
+        </div>
+
+
+    </div>
+
 
     <div class="testimonials">
         <div class="test1">
@@ -95,14 +139,14 @@
 
             </div>
             <div class="person">
-                <h1>zac</h1>
+                <h1>Zac</h1>
                 <i>"Shizzle my nizzle crocodizzle yo erizzle. 
                 Break yo neck, yall doggy my shizz, lacinia crunk amizzle, vulputate vitae, 
                 condimentizzle ac, its fo rizzle."</i>
                 
             </div>
             <div class="person">
-                <h1>katie</h1>
+                <h1>Katie</h1>
                 <i>"Stuff dawg purus. Nullam for sure amizzle 
                 that's the shizzle et bow wow wow tincidunt pellentesque."</i>
                 
@@ -111,20 +155,20 @@
         </div>
         <div class="test2">
             <div class="person">
-                <h1>michael</h1>
+                <h1>Michael</h1>
                 <i>"velizzle rizzle cursus justo, sizzle dang lacizzle shiznit quis enim. 
                 Sizzle fermentum yo mofo"</i>
 
             </div>
             <div class="person">
-                <h1>jr</h1>
+                <h1>Jr</h1>
                 <i>"Get down get down dignissizzle. 
                 In fo shizzle habitasse platea dictumst. Shizzlin dizzle sizzle amet dui. 
                 Bizzle sed dizzle. Aenizzle shizznit risizzle"</i>
                 
             </div>
             <div class="person">
-                <h1>greg</h1>
+                <h1>Christopher</h1>
                 <i>"Shiz lobortizzle, shut the shizzle up egizzle 
                 i saw beyonces tizzles and my pizzle went crizzle suscipizzle, 
                 stuff nulla pretium own yo', funky fresh izzle ipsizzle elizzle in risus."</i>
@@ -135,10 +179,28 @@
 
 
     <footer>
+        <div class="links">
+            <div class="link1">
+                <a href="careers.html"><h5>Careers</h5></a>
+                <a href="terms_and_contions.html"><h5>Terms and Conditions</h5></a>
+                <a href="privacy.html"><h5>Privacy Policy</h5></a>
+            </div>
+            <div class="link1">
+                <a href="service_bundle.html"><h5>Services</h5></a>
+                <a href="about.html"><h5>About</h5></a>
+                <a href="contact.html"><h5>Contact</h5></a>
+            </div>
+            <div class="link1">
+                <a href="#"><h5>Mobile App</h5></a>
+                <a href="#"><h5>Email Newsletter</h5></a>
+                <a href="#"><h5></h5></a>
+            </div>
+        </div>
+
         <div class="testi">
-        
             <h6>The Proffesional Hobo © 2018</h6>
         </div>
+
         <div id="icon">
             <a href="#"><i class="devicon-facebook-plain colored"></i></a>
             <a href="#"><i class="devicon-twitter-plain colored"></i></a>
